@@ -48,21 +48,21 @@
                             <div class="form-group">
 
                                 <label for="dni">
-                                    Email address
+                                    Dni
                                 </label>
                                 <input type="text" class="form-control" id="dni" name="dni">
                             </div>
                             <div class="form-group">
 
                                 <label for="nombre">
-                                    Email address
+                                    Nombre
                                 </label>
                                 <input type="text" class="form-control" id="nombre" name="nombre">
                             </div>
                             <div class="form-group">
 
                                 <label for="apellido">
-                                    Email address
+                                    Apellido
                                 </label>
                                 <input type="text" class="form-control" id="apellido" name="apellido">
                             </div>
