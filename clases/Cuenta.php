@@ -38,5 +38,16 @@ class Cuenta
     function getCliente(){
         return $this->idCliente;
     }
+    
+    function conectar() {
+        $conn = new mysqli('localhost', 'root', 'jupit3r', 'tp3objetos');
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+            echo "error de conexion a la base";
+        }
+        return $conn;
+    }
+
+    
 
 }

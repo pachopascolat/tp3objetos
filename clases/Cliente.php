@@ -28,7 +28,8 @@ class Cliente extends Persona {
         $conn = $this->conectar();
         $sql = "insert into Cliente(dni,nombre,apellido) values($this->dni,'$this->nombre','$this->apellido')";
         if ($conn->query($sql) === true) {
-            $_SESSION['id-cliente'] = $conn->insert_id;
+            session_start();
+            $_SESSION['cliente_id'] = $conn->insert_id;
             echo "<h1>Sus datos fueron guardados</h1>";
             $this->mostrarObjeto();
         }
@@ -37,8 +38,10 @@ class Cliente extends Persona {
 }
 
 $datos = $_POST;
+$dni = $datos['dni'];
 $cliente = new Cliente(null, $datos['dni'], $datos['nombre'], $datos['apellido']);
+//$cliente->mostrarObjeto();
 $cliente->save();
 //carguen el objeto y muestrenlo con mostrar objeto
 ?>
-<a href="../index.php"  class="btn btn-info">volver</a>
+<a href="../vista_cuenta.php"  class="btn btn-info">volver</a>
